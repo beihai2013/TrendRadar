@@ -148,111 +148,172 @@
 # ───────────────────────────────────────────────────────────────
 
 [WORD_GROUPS]
+# ════════════════════════════════════════════════
+# TrendRadar 关键词过滤器
+# 格式说明：
+# 1. [组名]：定义一个频道
+# 2. 每一行是一个关键词
+# 3. 支持正则：用 / 包裹，如 /GPT-?4/
+# ════════════════════════════════════════════════
 
-# ═══════════════════════════════════════════════════════════════
-#                         企业与品牌
-# ═══════════════════════════════════════════════════════════════
+[🤖 AI 与前沿科技]
+# --- 核心模型与厂商 ---
+/OpenAI|ChatGPT|Sam Altman/
+/DeepSeek|幻方量化/
+/Anthropic|Claude/
+/Google Gemini|DeepMind/
+/Meta LLaMA|LeCun/
+/Mistral|Qwen|Yi-Lightning/
+/Grok|xAI/
 
-/胖东来|于东来/ => 胖东来
-
-/深度求索|幻方量化|梁文锋|\bDeepSeek\b/ => DeepSeek
-
-/华为|任正非|余承东|鸿蒙|海思|昇腾|鲲鹏|\bHUAWEI\b|\bHarmonyOS\b|\bHiSilicon\b/ => 华为
-
-/比亚迪|王传福|方程豹|腾势|仰望|弗迪|刀片电池|云辇|\bBYD\b|\bDenza\b|\bYangwang\b/ => 比亚迪
-
-/大疆|汪滔|灵眸|如影|\bDJI\b|\bRoboMaster\b|\bMavic\b|\bZenmuse\b/ => 大疆
-
-/宇树|王兴兴|\bUnitree\b/ => 宇树机器人
-
-/智元|灵犀|稚晖君|彭志辉|AgiBot/ => 智元机器人
-/众擎|EngineAI|赵同阳/ => 众擎机器人
-
-/黑神话|冯骥/ => 黑神话悟空
-
-/影之刃零|梁其伟/ => 影之刃零
-
-/三体|流浪地球|刘慈欣|郭帆/ => 三体/流浪地球
-
-申奥
-
-/京东|刘强东|\bJD\b|\bJingdong\b/ => 京东
-
-/字节|张一鸣|梁汝波|抖音|\bByteDance\b|\bTikTok\b|\bDouyin\b|\bLark\b|\bCapCut\b/ => 字节跳动
-
-/腾讯|鹅厂|马化腾|微信|QQ|天美|阅文集团|微众银行|\bTencent\b|\bPony Ma\b|\bWeChat\b|\bLightSpeed\b|\bWeBank\b/ => 腾讯
-
-/qwen|minimax|glm/ => 国产开源模型
-
-/特斯拉|马斯克|\bTesla\b|\bElon Musk\b|\bCybertruck\b|\bModel 3\b|\bModel Y\b|\bModel S\b|\bModel X\b|\bFSD\b/ => 特斯拉
-
-/英伟达|黄仁勋|\bNVIDIA\b|\bGeForce\b|\bRTX\b|\bCUDA\b|\bJensen Huang\b/ => 英伟达
-/苏姿丰|锐龙|霄龙|\bAMD\b|\bRyzen\b|\bEPYC\b|\bRadeon\b|\bLisa Su\b/ => AMD
-
-/微软|\bMicrosoft\b|\bWindows\b|\bAzure\b|\bSatya Nadella\b|\bCopilot\b/ => 微软
-/谷歌|皮查伊|安卓|油管|\bGoogle\b|\bAlphabet\b|\bAndroid\b|\bChrome\b|\bYouTube\b|\bGemini\b|\bDeepMind\b|\bWaymo\b/ => 谷歌
-/库克|\biPhone\b|\biPad\b|\bMacBook\b|\biOS\b|\bVision Pro\b|\bAirPods\b|\bApple\b|\bTim Cook\b/ => 苹果
-
-/\bOpenAI\b|\bChatGPT\b|\bSora\b|\bDALL-E\b|\bSam Altman\b|\bGreg Brockman\b/ => OpenAI
-/\bAnthropic\b|\bClaude\b|\bDario Amodei\b/ => Claude
-
-
-# ═══════════════════════════════════════════════════════════════
-#                         国家与地区
-# ═══════════════════════════════════════════════════════════════
-
-[中国]
-国产
-中国
-
-[东亚]
-日本
-朝鲜
-韩国
-
-[北美]
-美国
-加拿大
-
-[西欧]
-法国
-英国
-
-/俄罗斯|俄国/ => 俄罗斯
-
-印度
-
-
-# ═══════════════════════════════════════════════════════════════
-#                         科技领域
-# ═══════════════════════════════════════════════════════════════
-
-[AI 相关]
-/(?<![a-zA-Z])ai(?![a-zA-Z])/
+# --- 技术术语 ---
+/LLM|Large Language Model/
+/Transformer|Diffusion Model/
+/RAG|CoT|Agent/
+/LoRA|Fine-tuning|微调/
+AI
+AGI
+大模型
+生成式
 人工智能
+机器学习
+深度学习
+神经网络
 
-[芯片]
+# --- 硬件与算力 ---
+/NVIDIA|Jensen Huang|黄仁勋/
+/H100|H800|B200|RTX 5090/
+/CUDA|GPU/
+算力
+显卡
 芯片
-光刻机
-半导体
 
-/水电|雅鲁藏布江/ => 水电
-/光伏|太阳能/ => 光伏
-核能
-能源
-
-/自动驾驶|无人驾驶|智驾/ => 自动驾驶
-
+# --- 应用场景 ---
+/Midjourney|Stable Diffusion|Flux/
+/Sora|Runway|Pika/
+/Copilot|Cursor|Windsurf/
+自动驾驶
 机器人
-/机械狗|四足/ => 机器狗
 具身智能
+脑机接口
 
-/月球|登月|火星|宇宙|飞船|航天|空间站|卫星/ => 航天
 
-# 前沿科技
-量子
-脑机
-基因
+[🛡️ 黑客与网络安全]
+# --- 威胁与攻击 ---
+/RCE|DDoS|XSS|SQL Injection/
+/0-day|Zero-day|零日/
+/Ransomware|Phishing/
+/Malware|Trojan/
+黑客
+漏洞
+攻击
+勒索
+病毒
+木马
+后门
+渗透
+挂马
+肉鸡
 
-# 产业政策
-生产力
+# --- 核心关注点 ---
+/CVE-\d+/
+数据泄露
+隐私保护
+网络战
+网络犯罪
+暗网
+社工库
+反诈
+信息安全
+
+# --- 知名组织与事件 ---
+/NSA|CIA|FBI/
+/APT\d+|Lazarus/
+/CrowdStrike|Microsoft Blue Screen/
+/DefCon|BlackHat/
+
+
+[💰 财经与宏观经济]
+# --- 股市与市场 ---
+/A股|美股|港股/
+/纳斯达克|道琼斯|标普500/
+/上证指数|恒生指数/
+/IPO|上市|退市/
+股市
+牛市
+熊市
+熔断
+抄底
+做空
+
+# --- 宏观经济 ---
+/Fed|Federal Reserve|美联储/
+/CPI|PPI|GDP/
+加息
+降息
+通胀
+通货紧缩
+汇率
+人民币
+美元
+外汇
+国债
+暴雷
+
+# --- 企业动态 ---
+财报
+营收
+净利润
+分红
+回购
+裁员
+破产
+重组
+收购
+
+# --- 加密货币 ---
+/Bitcoin|BTC|比特币/
+/Ethereum|ETH|以太坊/
+/Crypto|Web3|Blockchain/
+/Binance|Coinbase/
+加密货币
+区块链
+虚拟货币
+
+
+[🌏 时事热点与新闻]
+# --- 突发与高关注 ---
+/突发|重磅|独家/
+/刚刚|通报|官方/
+/热搜|头条|刷屏/
+曝光
+辟谣
+争议
+丑闻
+逝世
+地震
+灾难
+
+# --- 政治与国际 ---
+/Trump|Biden|Musk/
+/特朗普|拜登|马斯克/
+/Ukraine|Russia|Putin/
+/俄乌|普京|泽连斯基/
+/Israel|Gaza|Hamas/
+/以色利|加沙|哈马斯/
+外交部
+大选
+选举
+制裁
+战争
+峰会
+
+# --- 社会民生 ---
+政策
+新规
+社保
+房价
+医疗
+教育
+就业
+人口
