@@ -34,8 +34,8 @@ platforms:
   sources:
     - id: "toutiao"
       name: "今日头条"
-    - id: "baidu"
-      name: "百度热搜"
+    # - id: "baidu"
+    #   name: "百度热搜"
     - id: "wallstreetcn-hot"
       name: "华尔街见闻"
     - id: "thepaper"
@@ -46,10 +46,10 @@ platforms:
       name: "财联社热门"
     - id: "ifeng"
       name: "凤凰网"
-    - id: "tieba"
-      name: "贴吧"
-    - id: "weibo"
-      name: "微博"
+    # - id: "tieba"
+    #   name: "贴吧"
+    # - id: "weibo"
+    #   name: "微博"
     - id: "douyin"
       name: "抖音"
     - id: "zhihu"
@@ -89,7 +89,8 @@ rss:
   # - 不配置：使用全局 freshness_filter.max_age_days（默认 3 天）
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
-  feeds:
+feeds:
+    # --- 默认示例 ---
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
@@ -100,10 +101,61 @@ rss:
       url: "http://www.ruanyifeng.com/blog/atom.xml"
       # max_age_days: 7               # 示例：推送7天内的文章（更新较慢的博客）
     
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
-      enabled: false                  # 禁用
+    # --- 🤖 AI & 数据科学 (必读/高质量) ---
+    - id: "simonwillison"
+      name: "Simon Willison (LLM/Data)"
+      url: "https://simonwillison.net/atom/everything/"
+      
+    - id: "seangoedecke"
+      name: "Sean Goedecke (AI/Eng)"
+      url: "https://www.seangoedecke.com/rss.xml"
+
+    - id: "minimaxir"
+      name: "Max Woolf (Data/AI)"
+      url: "https://minimaxir.com/rss.xml"
+
+    - id: "gwern"
+      name: "Gwern Branwen (AI/Stats)"
+      url: "https://gwern.net/feed"
+      max_age_days: 7                 # Gwern 更新较慢但质量极高，放宽时间
+
+    - id: "geofreylitt"
+      name: "Geoffrey Litt (AI/Software)"
+      url: "https://geofreylitt.com/feed/"
+
+    # --- 🛡️ 网络安全 ---
+    - id: "krebsonsecurity"
+      name: "Krebs on Security"
+      url: "https://krebsonsecurity.com/feed/"
+
+    - id: "troyhunt"
+      name: "Troy Hunt"
+      url: "https://www.troyhunt.com/rss/"
+
+    - id: "micahflee"
+      name: "Micah Lee"
+      url: "https://micahflee.com/feed/"
+
+    - id: "lcamtuf"
+      name: "lcamtuf"
+      url: "https://lcamtuf.substack.com/feed"
+      
+    - id: "keygen"
+      name: "Keygen (Eng/Security)"
+      url: "https://keygen.sh/blog/feed.xml"
+
+    # --- 🌏 时事 & 财经 ---
+    - id: "pluralistic"
+      name: "Pluralistic (Tech Policy)"
+      url: "https://pluralistic.net/feed/"
+
+    - id: "derekthompson"
+      name: "Derek Thompson"
+      url: "https://www.derekthompson.org/feed"
+
+    - id: "experimental-history"
+      name: "Experimental History"
+      url: "https://www.experimental-history.com/feed"
 
     # 自定义源示例
     # - id: "custom-feed"
